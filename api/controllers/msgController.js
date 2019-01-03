@@ -15,7 +15,7 @@ exports.list_all_messages = (req, res) => {
     });
 };
 
-exports.create_a_message = (req, res) => {
+exports.create_a_messages = (req, res) => {
     var new_msg = new Message(req.body);
 
     new_msg.save((err, msg) => {
