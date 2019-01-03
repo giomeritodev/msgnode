@@ -18,5 +18,5 @@ routes(app);
 
 
 app.listen(port, () => {
-    console.log('Servidor rodando na porta: %s', port);
+    console.log('Servidor rodando na porta, para enviar as requisicoes: %s', port);
 });
