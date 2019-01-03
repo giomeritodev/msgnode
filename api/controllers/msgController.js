@@ -1,8 +1,8 @@
-'use strict';
+'use strict'
 
 var mongoose = require('mongoose');
 
-Message = mongoose.model('Messages');
+var Message = mongoose.model('Messages');
 
 exports.list_all_messages = (req, res) => {
     

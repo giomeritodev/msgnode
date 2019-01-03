@@ -7,7 +7,12 @@ var Message = require('./api/models/msgModel');
 var msgdb = 'mongodb://localhost/msgdb';
 
 mongoose.Promise = global.Promise;
-mongoose.connect(msgdb);
+mongoose.connect(msgdb, (err) => {
+    if(err){
+        console.log("Erro ao conectar com o banco");
+    }
+    console.log("Banco conectado!")
+});
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());

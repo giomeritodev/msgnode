@@ -1,6 +1,6 @@
 'use strict';
 
-module.export = (app) => {
+module.exports = (app) => {
     
     
     var messages = require('../controllers/msgController');
