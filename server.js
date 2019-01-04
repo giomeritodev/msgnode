@@ -14,7 +14,7 @@ app.use((req, res, next) => {
 });
 
 mongoose.Promise = global.Promise;
-mongoose.connect(msgdb, (err) => {
+mongoose.connect(msgdb, {useNewUrlParser: true}, (err) => {
     if(err){
         console.log("Erro ao conectar com o banco");
     }else{
