@@ -7,6 +7,12 @@ var msgdb = 'mongodb://localhost/msgdb';
 
 var Message = require('./api/models/msgModel');
 
+app.use((req, res, next) => {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+});
+
 mongoose.Promise = global.Promise;
 mongoose.connect(msgdb, (err) => {
     if(err){
